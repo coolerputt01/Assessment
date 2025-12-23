@@ -21,7 +21,7 @@ const navItems = [
 
 export default function Sidebar() {
   return (
-    <aside className="h-screen w-64 text-purple-800 flex flex-col justify-between fixed bg-gray-100 shadow-md">
+    <aside className="h-screen w-64 text-purple-800 flex flex-col justify-between fixed bg-white shadow-md">
       {/* Top */}
       <div>
         {/* Logo */}
@@ -40,7 +40,7 @@ export default function Sidebar() {
               key={label}
               className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-base transition
                 ${
-                  label === "Home"
+                  label === "Rewards Hub"
                     ? "bg-purple-300 text-purple-800 font-semibold"
                     : "hover:bg-purple-300 hover:text-purple-600 text-black cursor-pointer"
                 }
