@@ -8,6 +8,7 @@ import {
   Gift,
   Settings
 } from "lucide-react";
+import { ToastContainer, toast } from 'react-toastify';
 
 const navItems = [
   { label: "Home", icon: Home },
@@ -20,6 +21,16 @@ const navItems = [
 ];
 
 export default function Sidebar() {
+
+  const notify = () =>
+  toast.info("🚧 Navigation is disabled in this demo", {
+    autoClose: 3500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+  });
+
   return (
     <aside className="h-screen w-64 text-purple-800 flex flex-col justify-between fixed bg-white shadow-md">
       {/* Top */}
@@ -38,6 +49,7 @@ export default function Sidebar() {
           {navItems.map(({ label, icon: Icon }) => (
             <button
               key={label}
+              onClick={label !== "Rewards Hub" ? notify : undefined}
               className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-base transition
                 ${
                   label === "Rewards Hub"
@@ -65,6 +77,11 @@ export default function Sidebar() {
           </p>
         </div>
       </div>
+      <ToastContainer
+        theme="colored"
+        toastClassName="!rounded-xl !shadow-lg !text-sm !bg-purple-600"
+        style={{ zIndex: 10000 }}
+      />
     </aside>
   );
 }

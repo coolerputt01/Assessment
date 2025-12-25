@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SideBar from "../components/SideBar";
 import Modal from "../components/Modal";
 import RedeemCard from "../components/RedeemCard";
+import { ToastContainer, toast } from 'react-toastify';
 import {
   Bell,
   BadgeCheck,
@@ -147,52 +148,52 @@ export default function Rewards() {
 
               {/* Featured Tool */}
               <Card className="relative overflow-hidden rounded-xl shadow-lg bg-white p-6 max-w-md mx-auto">
-  {/* Background Image */}
-  <img
-    src="/images/gradient.png"
-    alt="Reclaim.ai"
-    className="absolute inset-0 w-full h-full object-cover opacity-20"
-  />
+                {/* Background Image */}
+                <img
+                  src="/images/gradient.png"
+                  alt="Reclaim.ai"
+                  className="absolute inset-0 w-full h-full object-cover opacity-20"
+                />
 
-  {/* Featured Badge */}
-  <span className="absolute top-4 right-4 bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1 rounded-full shadow">
-    Featured
-  </span>
+                {/* Featured Badge */}
+                <span className="absolute top-4 right-4 bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1 rounded-full shadow">
+                  Featured
+                </span>
 
-  {/* Title */}
-  <h3 className="font-bold text-lg text-gray-900 mb-4">
-    Top Tool Spotlight
-  </h3>
+                {/* Title */}
+                <h3 className="font-bold text-lg text-gray-900 mb-4">
+                  Top Tool Spotlight
+                </h3>
 
-  {/* Content Section */}
-  <div className="flex gap-4 items-start">
-    <Calendar className="text-purple-600 flex-shrink-0" size={48} />
+                {/* Content Section */}
+                <div className="flex gap-4 items-start">
+                  <Calendar className="text-purple-600 flex-shrink-0" size={48} />
 
-    <div>
-      <p className="font-medium text-sm text-gray-800">
-        Automate and Optimize Your Schedule
-      </p>
-      <p className="text-sm text-zinc-500 mt-1">
-        Reclaim.ai automatically schedules your tasks, meetings, and breaks to boost productivity.
-        Free to try — earn Flowva Points when you sign up!
-      </p>
-    </div>
-  </div>
+                  <div>
+                    <p className="font-medium text-sm text-gray-800">
+                      Automate and Optimize Your Schedule
+                    </p>
+                    <p className="text-sm text-zinc-500 mt-1">
+                      Reclaim.ai automatically schedules your tasks, meetings, and breaks to boost productivity.
+                      Free to try — earn Flowva Points when you sign up!
+                    </p>
+                  </div>
+                </div>
 
-  {/* Action Buttons */}
-  <div className="flex gap-3 mt-6">
-    <ActionBtn
-      icon={<User />}
-      label="Sign up"
-      className="bg-purple-600 text-white hover:bg-purple-700 transition-colors"
-    />
-    <ActionBtn
-      icon={<Gift />}
-      label="Claim 50 pts"
-      className="bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors"
-    />
-  </div>
-</Card>
+                {/* Action Buttons */}
+                <div className="flex gap-3 mt-6">
+                  <ActionBtn
+                    icon={<User />}
+                    label="Sign up"
+                    className="bg-purple-600 text-white hover:bg-purple-700 transition-colors"
+                  />
+                  <ActionBtn
+                    icon={<Gift />}
+                    label="Claim 50 pts"
+                    className="bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors"
+                  />
+                </div>
+              </Card>
 
             </div>
 
